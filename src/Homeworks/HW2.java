@@ -7,29 +7,28 @@ public class HW2 {
     public static void main(String[] args) {
 
         String firstName = "Ilir";
-        String firstName2 = "ilir";
+
 
 
         int firstNameLength = firstName.length();
         System.out.println("Length of " + firstName + " is: " + firstNameLength);
 
-        boolean doesStartK = firstName.startsWith("K");
-        System.out.println("Does " + firstName + " starts with K: " + doesStartK);
+
+        System.out.println("Does " + firstName + " starts with K: " + firstName.toUpperCase().startsWith("K"));
 
         char firstAlphabet = firstName.charAt(0);
         System.out.println("First alphabet of my name: " + firstAlphabet);
 
-        boolean doesEnd = firstName.toUpperCase().endsWith("M") && firstName.equalsIgnoreCase(firstName2) ;
 
-        System.out.println("Does " + firstName + " ends with M: " + doesEnd);
+        System.out.println("Does " + firstName + " ends with M: " + firstName.toUpperCase().endsWith("M"));
 
 
 
         String myStatement = "I am a good programmer";
 
         String [] words = myStatement.split(" ");
-        myStatement = words[4];
-        System.out.println("Last word of the sentence: " + myStatement);
+        int lastIndex = words.length-1;
+        System.out.println("Last word of the sentence: " + words[lastIndex]);
 
         String myStatement1 = "I am a good programmer";
         String[] split = myStatement1.split(" ");
@@ -44,10 +43,8 @@ public class HW2 {
 
         String myName = " Ilir";
 
-
-        int calculate = myName.indexOf("r");
-
-        System.out.println("Number of words in my name is: "+ calculate);
+        String[] myNameLetter = myName.split("");
+        System.out.println(myName + " length is: " + myNameLetter.length);
 
 
 
