@@ -13,25 +13,30 @@ public class HW3 {
          * Grade E: 51-60
          * Grade F: less than or equal to 50
          */
-        int studentScore = 135;
+        int studentScore = 115;
         int maxScore = 150;
+        String display = "";
         //calculate percentage
         //Your percentage: XX.yy and your grade is: A
 
         double percentage = (studentScore * 100 / maxScore);
+
         if (percentage >= 91 && percentage <= 100) {
-            System.out.println("Grade A");
+            System.out.println(percentage + "% and your grade is: A");
         } else if (percentage >= 81 && percentage <= 90) {
-            System.out.println("Grade B");
+            System.out.println(percentage + "% and your grade is: B");
         } else if (percentage >= 71 && percentage <= 80) {
-            System.out.println("Grade C");
+            System.out.println(percentage + "% and your grade is: C");
         } else if (percentage >= 61 && percentage <= 70) {
-            System.out.println("Grade D");
+            System.out.println(percentage + "% and your grade is: D");
         } else if (percentage >= 51 && percentage <= 60) {
-            System.out.println("Grade E");
+            System.out.println(percentage + "% and your grade is: E");
         } else if (percentage <= 50) {
-            System.out.println("Grade F");
+            System.out.println(percentage + "% and your grade is: F");
         }
+
+
+
 
 
         /**
@@ -47,15 +52,15 @@ public class HW3 {
 
         char carMode = 'D';
 
-        String driveType = "sport";
-
+        String driveType = "EcO";
+        String updateDriveType = driveType.toLowerCase();
 
         switch (carMode) {
             case 'P':
                 System.out.println("You can park car");
                 break;
             case 'D':
-                switch (driveType) {
+                switch (updateDriveType) {
                     case "snow":
                         System.out.println("You are on snow mode");
                         break;
