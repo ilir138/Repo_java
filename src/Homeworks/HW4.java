@@ -31,8 +31,7 @@ public class HW4 {
             upper += sentence.substring(0, 1).toUpperCase() + sentence.toLowerCase().substring(1) + " ";
             line = upper;
         }
-
-        System.out.println("Line (After modification) : " + line);
+        System.out.println("Line (After modification) : " + line.trim());
 
 
         /**
