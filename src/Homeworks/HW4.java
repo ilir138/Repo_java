@@ -52,7 +52,7 @@ public class HW4 {
         /**
          * Check if word is palindrome
          */
-        String word = "madam";
+        String word = "level";
         boolean result=false;
         String reverseWord ="";
         for (int i = word.length() - 1; i >= 0; i--) {
