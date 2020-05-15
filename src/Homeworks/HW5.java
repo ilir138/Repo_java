@@ -5,9 +5,9 @@ import java.util.Arrays;
 public class HW5 {
     public static void main(String[] args) {
         String[] names = {"john", "michael", "dora", "philip", "ilena", "palena", "fahry"};
+        String nameToSearch = "philip";
+        System.out.println(position(names,nameToSearch));
 
-
-        position("philip",names);
 
         int[]numbers = {11,22,33,44,56};
         double numbersTotal = arrayTotal(numbers);
@@ -15,32 +15,31 @@ public class HW5 {
         System.out.println("Average of the given array: " + numbersTotal);
 
         int[] numbers2 = {199, 22, 11, 65, 189, 91, 100, 81};
-        int numbersMax = getMaxValue(numbers2);
+        int numbersMax = maxValue(numbers2);
         System.out.println("Maximum value in the given array: " + numbersMax);
 
         int[] scores = {90, 89, 191, 100, 81};
-        String[] names3 = {"Happy", "Peace", "Jesse", "Kaitlin", "Lucky"};
-
-
+        String[] students = {"Happy", "Peace", "Jesse", "Kaitlin", "Lucky"};
+        System.out.println(getMaxValue(scores,students));
 
     }
 
 
-    public static int position (String nameToSearch, String[] array){
-
+    public static String position (String[] array,String nameToSearch){
         int index = 0;
+        String positionString="";
         for (int i =0; i<array.length;i++){
-            if (array[i]==nameToSearch){
+            if (array[i].equalsIgnoreCase(nameToSearch)){
                 index=i+1;
                 break;
             }
         }
         if (index>0){
-            System.out.println("The position of "+nameToSearch+" is: "+index);
+            positionString = nameToSearch + " is on position - " + index;
         }else {
-            System.out.println(nameToSearch + " is not present in the array.");
+            positionString = nameToSearch + " is not present in the array.";
         }
-        return index;
+        return positionString;
 
     }
     public static  double arrayTotal(int[] array){
@@ -53,8 +52,8 @@ public class HW5 {
         }
         return total;
     }
-    public static int getMaxValue(int[] numbers) {
-        int maxValue = 0;
+    public static int maxValue(int[] numbers) {
+        int maxValue = numbers[0];
         for (int i = 0; i < numbers.length; i++) {
             if (numbers[i] > maxValue) {
                 maxValue = numbers[i];
@@ -62,22 +61,18 @@ public class HW5 {
         }
         return maxValue;
     }
-   /* public static int getMaxValue(int[]scores,String[]names2) {
-
-
-        *//*String highestName = "";
-        int highestScore =0;
-
-
-
-            if (scores[i]>highestScore){
-                highestName=names2[i];
-                highestScore=scores[i];
+    public static String getMaxValue(int[]scores,String[]names2) {
+            int maxValue = scores[0];
+            int maxScore = 0;
+            String topStudent = "";
+            for (int i = 0; i < scores.length; i++) {
+                if (scores[i] > maxValue) {
+                    maxValue = scores[i];
+                    maxScore = i;
+                }
             }
+            topStudent = names2[maxScore] + " scored maximum score (" + maxValue + ")";
+            return topStudent;
 
-
-        return highestScore;
-*//*
-
-    }*/
+    }
 }
