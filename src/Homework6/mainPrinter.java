@@ -6,9 +6,9 @@ public class mainPrinter {
         p1.addPages(100);
         p1.addToner(100);
         Printer p2 = new Printer();
-        p1.print(8,2);
+        p1.print(65,7);
         System.out.println(p1.printerSummary());
-        p2.print(81,0);
+        p2.print(4,18);
         System.out.println(p2.printerSummary());
     }
 
