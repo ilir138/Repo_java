@@ -31,18 +31,21 @@ public void addToner (int tCount){
 }
 
 public void print (int singleSided, int doubleSided) {
- if (doubleSided%2==0){
-     toner = toner - doubleSided;
-     pages = pages - (doubleSided / 2);
- }else {
-     pages = pages - (doubleSided / 2+1);
-     toner = toner - doubleSided;
+
+     if (doubleSided % 2 == 0) {
+         toner = toner - doubleSided;
+         pages = pages - (doubleSided / 2);
+     } else {
+         pages = pages - (doubleSided / 2 + 1);
+         toner = toner - doubleSided;
+     }
+
+         toner = toner - singleSided;
+         pages = pages - singleSided;
+
  }
-     toner = toner - singleSided;
-     pages = pages - singleSided;
 
 
- }
  public int checkToner() {
 
 
