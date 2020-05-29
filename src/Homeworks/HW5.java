@@ -35,7 +35,7 @@ public class HW5 {
             }
         }
         if (index>0){
-            positionString = nameToSearch + " is on position - " + index;
+            positionString = nameToSearch + " is on position: " + index;
         }else {
             positionString = nameToSearch + " is not present in the array.";
         }

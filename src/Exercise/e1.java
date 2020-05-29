@@ -2,7 +2,7 @@ package Exercise;
 
 import Homeworks.HW4;
 
-public class e1 {
+public class e1{
     public static void main(String[] args) {
 
         String msg = "Hello";
@@ -15,12 +15,10 @@ public class e1 {
         int[]numbers = {11,22,33,44,56};
         double numbersTotal = arrayTotal(numbers) / numbers.length;
 
-        System.out.println("Total: " + numbersTotal);
+        //System.out.println("Total: " + numbersTotal);
 
 
-        for (int i =0;i<=15;i+=2) {
-            System.out.println("hello");
-        }
+
 
     }
     public static String reverseM (String message1){
@@ -48,5 +46,7 @@ public class e1 {
         }
         return total;
     }
+
+
 }
 
