@@ -18,6 +18,16 @@ public class e2 {
         String middles = middle("evaso");
         System.out.println("middle value: " + middles);
 
+
+        try {
+            System.out.println(20/4);
+            System.out.println(20/0);
+
+        }catch (ArithmeticException e){
+
+            System.out.println("No divided by 0");
+        }
+
     }
     public static String presentInArray(int numberToFind,int[] numbers){
         int count=0;
